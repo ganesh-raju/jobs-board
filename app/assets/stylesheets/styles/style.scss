@@ -1,0 +1,260 @@
+
+
+.home_page{
+	margin: 15rem 0px;
+	h3{
+		line-height: 5rem;
+	}
+}
+#small_title_text{
+	font-family: 'Roboto Mono', monospace;
+	font-size: 18px;
+	margin-bottom: 20px !important;
+}
+#small_description_text div, #small_description_text p, p {
+	font-family: 'Sen', sans-serif;
+	font-size: 16px;
+}
+.post_description, input{
+	font-family: 'Sen', sans-serif;
+	font-size: 20px;
+}
+.post_user_info{
+	font-family: 'Sen', sans-serif;
+	font-size: 15px;
+}
+.post_title{
+	font-family: 'Roboto Mono', monospace;
+	font-size: 40px;
+	font-weight: 700;
+}
+h2,h3,h4,h5,h1{
+	font-family: 'Roboto Mono', monospace;
+}
+#nav_links li a, .navbar-brand, label, button, span, a{
+	font-family: 'Roboto Mono', monospace;
+}
+// org form
+
+.org_form{
+	margin-top: 70px;
+	.form-group{
+		margin-bottom: 25px;
+	}
+}
+
+.form-group .error {
+	color: red;
+}
+
+.mtb-4{
+	margin: 40px 0px;
+}
+trix-editor{
+	height: auto !important;
+}
+
+//pagination
+
+.digg_pagination{
+	margin-top: 7rem;
+}
+
+//navbar brand
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #f5f5f5 !important;
+    background-color: transparent;
+}
+
+//Mouse over effects
+
+//search form
+
+.search_form{
+	margin-top: 0rem;
+	
+	padding: 20px 0px;
+
+	.col-md-3 {
+		padding-left: 0px !important;
+	}
+	
+	.form-control{
+	 	border: none;
+	 	outline: none;
+	 	background: transparent;
+	 	border-bottom: 2px solid #B8CBDF;
+	 	border-radius: 0px;
+	 	color: #333 !important;
+	 	padding: 25px 15px;
+	 	box-shadow: none;
+	 	font-size: 16px;
+	 }
+
+	 .form-control:focus{
+	 	outline: none;
+	 	border-color: #fff;
+	 	border-bottom: 2px solid #B8CBDF;
+	 	box-shadow: none !important;
+	 	-webkit-box-shadow: none !important;
+	 }
+}
+
+//admin table
+
+table{
+	margin-top: 50px;
+}
+
+//forms
+
+.sign_up_form {
+	margin-top: 50px;
+
+	#sign_up {
+		padding: 50px 60px;
+		border: 1px solid #ccc;
+		.field{
+			margin-bottom: 25px;
+		}
+	}
+}
+
+
+
+//new added
+
+
+
+a:hover{
+	text-decoration: none;
+}
+/* navbar */
+
+.navbar-default {
+    background-color: #3D3C5B;
+    border-color: transparent;
+}
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+   border: 1px solid transparent;
+   border-radius: 0px;
+   height: 50px;
+}
+.navbar-default .navbar-brand {
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.8px;
+}
+
+
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+    background-color: transparent;
+}
+
+
+
+/* body */
+
+
+/* alert */
+.added-books{
+	margin: 50px 0px;
+}
+
+
+
+.alert{
+	border-radius: 0px;
+}
+.alert-info {
+    color: #333;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-style: dashed;
+    letter-spacing: 1px;
+
+}
+
+
+
+.headers-table{
+	margin-top: 40px;
+	overflow: hidden;
+	
+	
+}
+.headers-table h4{
+	font-size: 18px;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+.headers-table p{
+	font-size: 13px;
+	color: #ccc;
+}
+
+.headers-table a{
+	margin-top: 20px;
+	font-size: 13px;
+	color: #fff;
+	border: 1px solid transparent;
+	background-color: #BF2BBB;
+	border-radius: 50px;
+	padding:8px 20px;
+}
+
+
+
+
+/* books table */
+
+.books-data{
+	margin-top: 30px;
+}
+.table-bordered {
+    border: 1px solid #f1f1f1;
+}
+.books-data thead{
+	background-color: #B8CBDF;
+	height: 50px;
+	line-height: 60px;
+}
+
+.books-data thead th{
+	font-size: 14px;
+}
+
+th{
+	line-height: 40px !important;
+    font-weight: bold;
+    border: transparent !important;
+    font-size: 13px !important;
+    letter-spacing: 1px;
+}
+
+tr{
+	border-bottom: 1px solid #f1f1f1;
+}
+
+td{
+	line-height: 40px !important;
+	border: 1px solid #f1f1f1 !important;
+	font-size: 13px !important;
+	border: transparent !important;
+	letter-spacing: 0.7px;
+}
+
+.border_bottom{
+	border_bottom: 2px solid #ccc !important;
+}

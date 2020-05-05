@@ -1,0 +1,42 @@
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<h1><%= @company.name %></h1>
+		<br>
+		<p>Location: <%= @company.location %></p>
+		<p>Employees: <%= @company.emp_count %></p>
+		<br>
+		<p>
+			<%= @company.description %>
+		</p>
+
+	</div>
+</div>
+<br>
+<br>
+<br>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<% @reviews.each do |r| %>
+			<p>Reviewed by <%= r.user.email.split("@")[0] %>, <%= r.role %></p>
+			<p><%= r.body %></p>
+		<% end %>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<%= form_for :review, url: company_reviews_path(company_id: params[:id]), method: :post do |f| %>
+			<div class="form-group">
+				<%= f.text_area :body, class: "form-control", placeholder: "Review" %>
+			</div>
+
+			<div class="form-group">
+				<%= f.text_field :role, class: "form-control", placeholder: "Role" %>
+			</div>
+
+			<div class="form-group">
+				<%= f.submit :submit, class: "btn btn-primary" %>
+			</div>
+		<% end %>
+	</div>
+</div>

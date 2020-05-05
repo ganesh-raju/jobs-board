@@ -1,0 +1,41 @@
+<div class="row text-center">
+  <h1>List of Jobs</h1>
+</div>
+
+<br>
+<br>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  	<%= form_for :search, url: jobs_path, method: :get do |f| %>
+
+  		<div class="row">
+  			<div class="col-md-5">
+  				<%= f.text_field :job_title, value: @search_params.present?? @search_params["job_title"] : "" , class: "form-control", placeholder: "Job Title" %>
+  			</div>
+  			<div class="col-md-5">
+  				<%= f.text_field :company_name, value: @search_params.present?? @search_params["company_name"] : "", class: "form-control", placeholder: "Company name" %>
+  			</div>
+  			<div class="col-md-2">
+  				<%= f.submit "Search", class: "btn btn-primary" %>
+  			</div>
+  		</div>
+
+  	<% end %>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  	<% if @jobs.present? %>
+	    <% @jobs.each do |job| %>
+	      <h3><%= link_to job.title, job_path(job) %></h3>
+	      <p><strong>Company: </strong><%= job.company.name %> &emsp; <strong>Location:</strong> <%= job.location %></p>
+	    <% end %>
+	<% else %>
+		<br>
+		<p class="row text-center">
+			No jobs found
+		</p>
+	<% end %>
+  </div>
+</div>

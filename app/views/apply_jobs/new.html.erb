@@ -1,0 +1,40 @@
+<div class="row text-center">
+  <h3>Apply Job</h3>
+</div>
+
+<br>
+<br>
+<div class="row">
+	<div class="col-md-4 col-md-offset-4">
+		<h4><%= @job.title %> - <%= @job.company.name %></h4>
+	</div>
+</div>
+
+<br>
+<br>
+
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+	<%= form_for :apply_job, url: job_apply_jobs_path(@job.id), method: :post do |f| %>
+		<div class="form-group">
+			<%= f.text_field :name , class: "form-control", placeholder: "Name"%>
+		</div>
+		<div class="form-group">
+			<%= f.number_field :exp , class: "form-control", placeholder: "Experience"%>
+		</div>
+		<div class="form-group">
+			<%= f.text_field :ctc , class: "form-control", placeholder: "CTC ex: 5LPA"%>
+		</div>
+		<div class="form-group">
+			<%= f.text_field :ectc , class: "form-control", placeholder: "ECTC ex: 10LPA"%>
+		</div>
+		<div class="form-group">
+			<%= f.text_field :notice_period , class: "form-control", placeholder: "Notice Period"%>
+		</div>
+
+		<div class="form-group">
+			<%= f.submit  "Apply", class: "btn btn-primary" %>
+		</div>
+	<% end %>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  exp: 1
+  ctc: MyString
+  ectc: MyString
+  notice_period: MyString
+  user: one
+  job: one
+
+two:
+  name: MyString
+  exp: 1
+  ctc: MyString
+  ectc: MyString
+  notice_period: MyString
+  user: two
+  job: two

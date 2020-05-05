@@ -1,0 +1,16 @@
+<div class="row text-center">
+  <h3>List of Companies</h3>
+</div>
+<br>
+<br>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  	<% @companies.each do |c| %>
+  		<div class="border_bottom">
+  			<h3><%= link_to c.name, company_path(c) %></h3>
+  			<p><strong>Emp Count:</strong> <%= c.emp_count %></p>
+  			<p><%= link_to "List Of Jobs", "" %> </p>
+  		</div>
+  	<% end %>
+  </div>
+</div>
