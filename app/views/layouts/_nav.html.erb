@@ -31,9 +31,11 @@
             <li><a href="/companies">Companies</a></li>
             <li><a href="/users/sign_in">Sign in</a></li>
         <% else %>
-            <li><a href="/"></a></li>
+            <li><a><%= current_user.user_role %></a></li>
             <li><a href="/jobs">Jobs</a></li>
-            <li><a href="/jobs/new">Create Job</a></li>
+            <% if current_user.recruiter? %>
+              <li><a href="/jobs/new">Create Job</a></li>
+            <% end %>
             <li><a href="/companies">Companies</a></li>
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
         <% end %>

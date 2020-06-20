@@ -16,7 +16,7 @@
 <br>
 <div class="row">
 	<div class="col-md-6 col-md-offset-3">
-		<% @reviews.each do |r| %>
+		<% @company.reviews.each do |r| %>
 			<p>Reviewed by <%= r.user.email.split("@")[0] %>, <%= r.role %></p>
 			<p><%= r.body %></p>
 		<% end %>

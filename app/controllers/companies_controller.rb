@@ -3,12 +3,11 @@ class CompaniesController < ApplicationController
 	before_action :company_params, only: [:create]
 
 	def index
-		@companies = Company.all
+		@companies = Company.includes(:reviews).all
 	end
 
 	def show
-		@company = Company.find(params[:id])
-		@reviews = @company.reviews
+		@company = Company.includes(:reviews).find(params[:id])
 	end
 
 	def new

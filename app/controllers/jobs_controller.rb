@@ -1,8 +1,9 @@
 class JobsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_company, except: [:index, :show]
-  before_action :set_job, only: [:show, :edit, :update, :destroy]
+  before_action :set_job, only: [ :edit, :update, :destroy]
   before_action :check_current_user_applied_for_this_job, only: [:show]
+
 
   def index
     @search_params = params[:search]
@@ -19,6 +20,7 @@ class JobsController < ApplicationController
   end
 
   def show
+    @job = Job.includes(:apply_jobs).find(params[:id])
     #nil.test!
     respond_to do |format|
       format.html
@@ -77,12 +79,18 @@ class JobsController < ApplicationController
 
   private
 
+
     def set_company
-      if current_user.company.present?
-        @company = current_user.company
+      #nil.test!
+      if current_user.job_seeker?
+        redirect_to jobs_path
       else
-        flash[:notice] = 'Please create company'
-        redirect_to new_company_path
+        if current_user.company.present?
+          @company = current_user.company
+        else
+          flash[:notice] = 'Please create company'
+          redirect_to new_company_path
+        end
       end
     end
     # Use callbacks to share common setup or constraints between actions.
@@ -92,7 +100,7 @@ class JobsController < ApplicationController
 
     def check_current_user_applied_for_this_job
       return unless user_signed_in? 
-      @job_applied = ApplyJob.where('user_id like ? and job_id like ?', current_user.id, @job.id)
+      @job_applied = ApplyJob.job_applied(current_user.id, params["id"].to_i)
     end
 
     # Only allow a list of trusted parameters through.

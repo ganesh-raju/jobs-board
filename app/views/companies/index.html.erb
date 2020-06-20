@@ -10,6 +10,7 @@
   			<h3><%= link_to c.name, company_path(c) %></h3>
   			<p><strong>Emp Count:</strong> <%= c.emp_count %></p>
   			<p><%= link_to "List Of Jobs", "" %> </p>
+        <p>Reviews count: <%= c.reviews.count %></p>
   		</div>
   	<% end %>
   </div>
