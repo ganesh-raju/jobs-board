@@ -64,7 +64,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #manually added gems
 gem 'jquery-rails'
 gem 'trix-rails', require: 'trix'
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 gem 'jquery-validation-rails'
 gem 'rails-controller-testing'
 gem 'devise'
